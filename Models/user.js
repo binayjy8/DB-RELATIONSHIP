@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const {Schema} = mongoose;
 
 main()
 .then(() => console.log("connection successfull"))
