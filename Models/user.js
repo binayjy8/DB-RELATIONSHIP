@@ -20,3 +20,15 @@ const userSchema = new Schema ({
 });
 
 const User = mongoose.model("User", userSchema);
+
+const addUsers = async() => {
+    let user1 = new User({
+        username: "homelock",
+        addresses: [{
+            location: "street bazar 112B",
+            city: "kalkata",
+        }]
+    });
+
+    user1.addresses.push({location: "wallmart street", city: "London"});
+}
