@@ -9,13 +9,7 @@ async function main() {
   await mongoose.connect("mongodb://127.0.0.1:27017/relationDemo");
 }
 
-const userSchema = new Schema ({
-    username : String,
-    addresses : [
-        {
-            _id: false,
-            location: String,
-            city: String,
-        },
-    ],
+const orderSchema = new Schema ({
+   item: String,
+   price: Number
 });
