@@ -31,4 +31,8 @@ const addUsers = async() => {
     });
 
     user1.addresses.push({location: "wallmart street", city: "London"});
+    let result = await user1.save();
+    console.log(result);
 }
+
+addUsers();
