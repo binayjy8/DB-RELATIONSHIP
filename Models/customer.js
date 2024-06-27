@@ -16,6 +16,16 @@ const orderSchema = new Schema ({
 
 const Order = mongoose.model("Order", orderSchema);
 
+const customerSchema = new Schema ({
+  name: String,
+  ordes: [
+    {
+      type: Schema.Types.ObjectId, 
+      ref: "Order"
+    },
+  ],
+});
+
 const addOrder = async () => {
     let res = await Order.insertMany([
         {item: "somasa", price: 7},
