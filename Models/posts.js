@@ -31,4 +31,9 @@ const addData = async () => {
         username: "Rahul kumar",
         email: "rahul@gmail.com"
     });
+
+    let post1 = new Post ({
+        content: "Hello World",
+        likes: 10
+    });
 };
