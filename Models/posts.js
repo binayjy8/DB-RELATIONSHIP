@@ -25,3 +25,10 @@ const postSchema = new Schema ({
 
 const User = mongoose.model("User", userSchema);
 const Post = mongoose.model("Post", postSchema);
+
+const addData = async () => {
+    let user1 = new User ({
+        username: "Rahul kumar",
+        email: "rahul@gmail.com"
+    });
+};
