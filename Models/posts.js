@@ -36,4 +36,9 @@ const addData = async () => {
         content: "Hello World",
         likes: 10
     });
+
+    post1.user = user1;
+
+    await user1.save();
+    await post1.data();
 };
